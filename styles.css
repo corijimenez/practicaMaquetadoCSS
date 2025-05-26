@@ -11,17 +11,19 @@ body{
 }
 nav{
     background-color: rgb(141, 87, 248);
-    padding: 20px 30px;
+    padding: 20px;
     
 }
-.position{
-    text-align: center;
-}
-.position a{
-    color: aliceblue;
-    text-align: center;
-    background-color: rgb(141, 87, 248);
+
+nav li{
+    display: inline;
     padding: 10px;
+
+}
+/*duda, para que sirve el nav li:hover si ya esta el nav a:hover para dar efectos?*/
+nav a{
+    color: aliceblue;
+    padding: 12px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
@@ -29,10 +31,15 @@ nav{
     margin: 10px;
 }
 
-.position a:hover{
+nav a:hover{
     color: rgb(141, 87, 248) ;
     background-color: aliceblue;
     box-shadow: 2px 5px 10px #c2c1c1;
+    
+}
+
+nav ul{
+    text-align: center;
 }
 
 .container{
