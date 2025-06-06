@@ -1,68 +1,194 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-body{
-    font-family: "Montserrat", sans-serif;
+body {
+  font-family: "Montserrat", serif;
 }
-nav{
-    background-color: rgb(141, 87, 248);
-    padding: 20px;
-    
+main {
+  margin: 30px;
 }
 
-nav li{
-    display: inline;
-    padding: 10px;
-
-}
-/*duda, para que sirve el nav li:hover si ya esta el nav a:hover para dar efectos?*/
-nav a{
-    color: aliceblue;
-    padding: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 300ms;
-    margin: 10px;
+h1,
+h2 , h3{
+  margin: 10px 0px;
 }
 
-nav a:hover{
-    color: rgb(141, 87, 248) ;
-    background-color: aliceblue;
-    box-shadow: 2px 5px 10px #c2c1c1;
-    
+p {
+  margin-bottom: 5px;
 }
 
-nav ul{
-    text-align: center;
+ul,
+ol {
+  list-style-position: inside;
+}
+header{
+  position: sticky;
+  top: 0px;
+  z-index: 3;
 }
 
-.container{
-    margin: 30px;
+article{
+  scroll-margin-top: 75px;
+}
+
+nav {
+  background: #599edf;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 40px;
+  padding: 14px;
+}
+
+nav a:hover {
+  background-color: #e6f1f8;
+  border-radius: 5px;
+  padding: 14px;
+  color: #3f87a6;
+  transition: 400ms;
+  box-shadow: 0px 2px 5px #285979;
+}
+
+footer {
+  text-align: center;
+  background: rgb(30, 28, 28);
+  color: white;
+  padding: 15px 0px;
+}
+
+nav li {
+  display: inline;
+}
+
+/*practica de posicionamiento relativo*/
+.caja {
+  /*caja es el div padre de elemento relativo 1 y 2 con sus respectivos div*/
+  border: 1px solid gray;
+  height: 200px;
+  background-color: #acd2f5;
+  position: relative;
+}
+
+.elementosRelativos {
+  border: 1px solid darkgray;
+  padding: 10px;
+  width: 170px;
+  text-align: center;
+}
+
+.elementosRelativo1 {
+  background-color: #c481ff;
+  position:relative;
+  top: 100px; /*mueve la caja de arriba hacia abajo 100px, solo se activa con position*/
+  left: 50px; /*mueve la caja de izquiera a derecha */
+  z-index: 1;
+}
+
+.elementosRelativo2 {
+  background-color: #7effb8;
+  position: relative; /*el relative respeta el espacio original del elemento desplazado*/
+  top: 30px;
+  /*bottom: 30px; mueve la caja de abajo para arriba*/
+  
+}
+
+/*practica posicionamiento absoluto*/
+.cajaAbsoluto1{
+  background-color: #faf553;
+  position: absolute; /*el absolute a diferencia del relative, queda el elemnto flotando y pierde su posicion original al desplazarse*/
+  top: 50px;
+  left:100px;
+}
+
+.cajaAbsoluto2{
+  background-color: #ff81c2;
+}
+
+.margaritaImg{
+  width: 500px;
+}
+.tituloMargarita{
+  color: #353409;
+  background-color: #e6f1f8;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contenedorMargarita{
+  position: relative;
+
 }
 
 
-h1,h2,h3,h4,h5,h6{
-    margin: 15px 0px;
-    font-family: "Montserrat",sans-serif;
+.contenedorFloresRosas{
+  position: relative;
+}
+.tituloFloresRosas{
+  color: #353409;
+  background-color: rgba(128, 128, 128, 0.351);
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  box-shadow: 0px 2px 5px #515659;
+  font-weight: bolder;
+  padding: 10px;
+  border-radius: 8px;
 }
 
-p{
-    margin-bottom: 10px;
+.floresImg {
+  width: 600px;
+}
+.contenedorTulipan{
+  position: relative;
+}
+ .tulipanImg{
+  height: 500px;
+ }
+
+.carrito{
+  background-color: rgb(241, 55, 55);
+  color: #e6f1f8;
+  position: absolute;
+  bottom: 30px;
+  left: 180px;
+  box-shadow: 0px 2px 5px #515659;
+  padding: 10px;
+  border-radius: 8px;
+}
+.logo-whatsapp{
+  font-size: 50px;
+  color: white;
+}
+.fondo-whatsapp{
+  width: 68px;
+  height: 68px;
+  background-color: green;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;/*fija el elemento en el viewport sin importar que scrollee, se mantendra siempre ahi*/
+  bottom: 43px;
+  right: 30px;
 }
 
-footer{
-    background-color: rgb(33, 33, 33);
-    color: aliceblue;
-    text-align: center;
-    padding: 30px;
+.cajaSticky{
+ border: 2px solid #285979 ;
 }
-
-ul,ol {
-    list-style-position: inside;
+.parrafoSticky{
+  background-color: #faf553;
+  position: sticky; /*se fija dentro de su contennedor cuando scrolleo hasta donde yo lo limito, o hasta que termina el contenedor padre*/
+  top: 60px;
+  
 }

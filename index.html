@@ -1,90 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maquetado</title>
-    <meta name="description" content="Practica maquetado" />
-    <meta name="author" content="Corina Jimenez" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta
+      name="description"
+      content="practica de posicionamiento con css, relative, absolute, fixed y sticky"
+    />
+    <meta name="authr" content="Corina Jimenez" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <title>Practica position</title>
   </head>
   <body>
     <header>
       <nav>
-        
-          <ul>
-            <li><a href="">Relative</a></li>
-            <li><a href="">Absolute</a></li>
-            <li><a href=" ">Fixed</a></li>
-            <li><a href="">Sticky</a></li>
-          </ul>
-        
+        <ul>
+          <li><a href="#relativo">Relative</a></li>
+          <li><a href="#absoluto">Absolute</a></li>
+          <li><a href="#fixed">Fixed</a></li>
+          <li><a href="#sticky">Sticky</a></li>
+        </ul>
       </nav>
     </header>
     <main>
-      <section class="container">
-        <h1>Posicionamiento en CSS</h1>
+      <h1>Posicionamiento con CSS</h1>
+      <p>
+        La propiedad position de CSS especifica cómo un elemento es posicionado
+        en el documento. Las propiedades top, right, bottom, y left determinan
+        la ubicación final de los elementos posicionados.
+      </p>
+      <p>
+        Un elemento posicionado es un elemento cuyo valor computado de position
+        es <strong>relative</strong>, <strong>absolute</strong>,
+        <strong>fixed</strong>, o <strong>sticky</strong>. (En otras palabras,
+        cualquiera excepto static).
+      </p>
+      <h2>Usos comunes de posicionamiento en CSS</h2>
+      <ul>
+        <li>
+          <b>Relative:</b> Se usa para realizar ajustes finos y como base para
+          el posicionaimiento absolute.
+        </li>
+        <li>
+          <b>Absolute:</b> Se utliza para superposición de elementos, por
+          ejemplo: cuando tenemos una imagen y sobre ella texto
+        </li>
+        <li>
+          <b>fixed:</b> Se utliza para fijar elementos en la ventana del
+          navegador, como los navbar, algun chatbot etc.
+        </li>
+        <li>
+          <b>Sticky:</b> Elementos que se pegan en su contenedor al desplazarse,
+          como menús laterales
+        </li>
+      </ul>
+      <article id="relativo">
+        <h2>Posicionamiento Relativo</h2>
         <p>
-          La propiedad position de CSS especifica como un elemento es
-          posicionado en el documento. Las propiedades top, right, bottom, y
-          left determinan la ubicacion final de los elementos posicionados.
-        </p>
-        <p>
-          Un elemento posicionado es un elemento cuyo valor computado de
-          position es <strong>relative </strong>, <strong>absolute</strong>,
-          <strong>fixed</strong> o <strong>sticky</strong>. (En otras palabras,
-          cualquiera excepto static).
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eos
+          nam ipsum neque maiores commodi quidem reiciendis possimus repellat
+          quas dicta soluta unde ipsam facilis velit ex, laboriosam expedita
+          fuga.
         </p>
 
-        <article>
-          <h2>Usos comunes de posicionamiento en CSS</h2>
-          <ul>
-            <li>
-              <strong>Relative:</strong> Se usa para realizar ajustar finos y
-              como base para el posicionamiento absolute.
-            </li>
-            <li>
-              <strong>Absolute:</strong> Se utiliza para seperposicionamiento de
-              elementos, por ejemplo: cuando tenemos una imagen y sobre ella
-              texto.
-            </li>
-            <li>
-              <strong>Fixed:</strong> Se utiliza para fijar elementos en la
-              ventana del navegador, como los navbar, algun chatbot, etc.
-            </li>
-            <li>
-              <strong>Sticky:</strong> Elementos que se pegan en su contenedor
-              al desplazarse, como menús laterales
-            </li>
-          </ul>
-        </article>
-        <article>
-          <h2>Posicionamiento fixed</h2>
-          <p>
-            El elemento con posicionamiento fijo se posiciona en relacion a ala
-            venta del navegador y permanece fijo cuando se desplaza la pagina.
+        <div class="caja">
+          <div class="elementosRelativos elementosRelativo1">
+            <p>elemento relativo 1</p>
+          </div>
+          <div class="elementosRelativos elementosRelativo2">
+            <p>elemento relativo 2</p>
+          </div>
+        </div>
+      </article>
+      <article id="absoluto">
+        <h2>Posicionamiento absoluto</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus ex
+          sequi provident, accusamus minima, exercitationem officia voluptatum
+          quis pariatur necessitatibus assumenda totam! Molestiae ipsa veritatis
+          repudiandae, voluptate tempora consectetur corrupti.
+        </p>
+        <div class="caja">
+          <div class="elementosRelativos cajaAbsoluto1">
+            <p>elemento absoluto 1</p>
+          </div>
+          <div class="elementosRelativos cajaAbsoluto2">
+            <p>elemento absoluta 2</p>
+          </div>
+        </div>
+        <h3>combinamos posicionamiento relativo con absoluto!</h3>
+        <div class="contenedorMargarita">
+          <img
+            src="https://images.unsplash.com/photo-1745990652119-f13cced69b7c?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="margarita"
+            class="margaritaImg"
+          />
+          <h4 class="tituloMargarita">Margaritas como floricienta</h4>
+        </div>
+        <h3>Practica adicional</h3>
+        <div class="contenedorFloresRosas">
+          <img
+            src="https://images.unsplash.com/photo-1458929526027-052f5d6a3c5e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="flores rosas"
+            class="floresImg"
+          />
+          <p class="tituloFloresRosas">
+            Flores Rosadas que dan calma <a href=""> -> ir a flores</a>
           </p>
-        </article>
-        <article>
-          <h2>Posicionamiento sticky</h2>
-          <p>
-            El elemento con posicionamiento sticky se comporta como un elemento
-            relativo hasta que se desplaza a su posicion limite, donde se "pega"
-            y permanece fijo.
-          </p>
-          <p>🔥Legos más icónicos y populares</p>
+        </div>
+        <div class="contenedorTulipan">
+          <img
+            src="https://images.unsplash.com/photo-1617111490936-07b47eafdcd4?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="tulipan en maceta"
+            class="tulipanImg"
+          />
+          <h4 class="carrito">Comprar 🛒</h4>
+        </div>
+      </article>
+
+      <article id="fixed">
+        <h2>Posicionamiento fixed</h2>
+        <p>
+          El elemento con posicionamiento fijo se posiciona en relación a la
+          ventana del navegador y permanece fijo cuando se desplaza la página.
+        </p>
+        <div class="fondo-whatsapp">
+          <i class="bi bi-whatsapp logo-whatsapp"></i>
+        </div>
+      </article>
+      <article id="sticky">
+        <h2>Posicionamiento sticky</h2>
+        <p>
+          El elemento con posicionamiento sticky se comporta como un elemento
+          relativo hasta que se desplaza a su posición límite, donde se "pega" y
+          permanece fijo.
+        </p>
+        <div class="cajaSticky">
+          <p class="parrafoSticky">🔥 Legos más icónicos y populares</p>
           <ol>
             <li>
               LEGO Millennium Falcon (75192) - La versión UCS (Ultimate
-              Collector's Series) de Star Wars, con mas de 7,500 piezas.
+              Collector's Series) de Star Wars, con más de 7,500 piezas.
             </li>
             <li>
-              LEGO Taj Mahal (10256) - Uno de los sets mas grandes, con detalles
+              LEGO Taj Mahal (10256) - Uno de los sets más grandes, con detalles
               impresionantes.
             </li>
             <li>
-              LEGO Colosseum (10276) - Replica detallada del Coliseo de Roma con
-              mas de 9,000 piezas.
+              LEGO Colosseum (10276) - Réplica detallada del Coliseo de Roma con
+              más de 9,000 piezas.
             </li>
             <li>
               LEGO Titanic (10294) - Un set gigante de 9,090 piezas con detalles
@@ -95,11 +163,107 @@
               Señor de los Anillos, con 6,167 piezas.
             </li>
           </ol>
-        </article>
-      </section>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          aliquam? Fuga asperiores ducimus odit maiores quo amet ea et id harum
+          magnam molestias, suscipit delectus porro obcaecati, commodi quis
+          corrupti perferendis. Quas, id sequi vitae, accusantium aspernatur
+          dolores tenetur, unde adipisci assumenda labore voluptatum doloremque.
+          Sapiente provident cum ratione sequi laborum fuga neque obcaecati
+          earum, itaque porro! Eius eum, ipsa odio quia itaque explicabo.
+          Expedita fugiat reiciendis harum ea porro numquam accusamus ipsam
+          voluptates similique? Facere, quasi? Enim sequi recusandae iusto,
+          maiores nulla iure aperiam architecto a, error labore ratione! Ut
+          facere maiores expedita hic quod maxime temporibus itaque? Ducimus
+          repellendus tempora sed sapiente modi possimus officia adipisci
+          mollitia maxime, asperiores at quod maiores molestias, omnis porro
+          enim reiciendis unde fuga, itaque neque placeat saepe illum. Enim
+          repellendus rem maiores neque deleniti, architecto accusamus tempora
+          excepturi ea ipsum numquam harum doloremque voluptatibus tempore modi
+          suscipit est, sunt corporis quae rerum, autem reprehenderit quaerat.
+          Nihil, consectetur eaque dolor labore quo voluptates error repellendus
+          soluta officia reiciendis sed nulla? Atque perspiciatis distinctio
+          illo et veniam nihil quam, rem sapiente esse alias quisquam optio
+          aperiam facilis quis ut magnam eligendi sunt error labore commodi non
+          ullam minus possimus corporis. Fugiat iure quis expedita.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          aliquam? Fuga asperiores ducimus odit maiores quo amet ea et id harum
+          magnam molestias, suscipit delectus porro obcaecati, commodi quis
+          corrupti perferendis. Quas, id sequi vitae, accusantium aspernatur
+          dolores tenetur, unde adipisci assumenda labore voluptatum doloremque.
+          Sapiente provident cum ratione sequi laborum fuga neque obcaecati
+          earum, itaque porro! Eius eum, ipsa odio quia itaque explicabo.
+          Expedita fugiat reiciendis harum ea porro numquam accusamus ipsam
+          voluptates similique? Facere, quasi? Enim sequi recusandae iusto,
+          maiores nulla iure aperiam architecto a, error labore ratione! Ut
+          facere maiores expedita hic quod maxime temporibus itaque? Ducimus
+          repellendus tempora sed sapiente modi possimus officia adipisci
+          mollitia maxime, asperiores at quod maiores molestias, omnis porro
+          enim reiciendis unde fuga, itaque neque placeat saepe illum. Enim
+          repellendus rem maiores neque deleniti, architecto accusamus tempora
+          excepturi ea ipsum numquam harum doloremque voluptatibus tempore modi
+          suscipit est, sunt corporis quae rerum, autem reprehenderit quaerat.
+          Nihil, consectetur eaque dolor labore quo voluptates error repellendus
+          soluta officia reiciendis sed nulla? Atque perspiciatis distinctio
+          illo et veniam nihil quam, rem sapiente esse alias quisquam optio
+          aperiam facilis quis ut magnam eligendi sunt error labore commodi non
+          ullam minus possimus corporis. Fugiat iure quis expedita.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          aliquam? Fuga asperiores ducimus odit maiores quo amet ea et id harum
+          magnam molestias, suscipit delectus porro obcaecati, commodi quis
+          corrupti perferendis. Quas, id sequi vitae, accusantium aspernatur
+          dolores tenetur, unde adipisci assumenda labore voluptatum doloremque.
+          Sapiente provident cum ratione sequi laborum fuga neque obcaecati
+          earum, itaque porro! Eius eum, ipsa odio quia itaque explicabo.
+          Expedita fugiat reiciendis harum ea porro numquam accusamus ipsam
+          voluptates similique? Facere, quasi? Enim sequi recusandae iusto,
+          maiores nulla iure aperiam architecto a, error labore ratione! Ut
+          facere maiores expedita hic quod maxime temporibus itaque? Ducimus
+          repellendus tempora sed sapiente modi possimus officia adipisci
+          mollitia maxime, asperiores at quod maiores molestias, omnis porro
+          enim reiciendis unde fuga, itaque neque placeat saepe illum. Enim
+          repellendus rem maiores neque deleniti, architecto accusamus tempora
+          excepturi ea ipsum numquam harum doloremque voluptatibus tempore modi
+          suscipit est, sunt corporis quae rerum, autem reprehenderit quaerat.
+          Nihil, consectetur eaque dolor labore quo voluptates error repellendus
+          soluta officia reiciendis sed nulla? Atque perspiciatis distinctio
+          illo et veniam nihil quam, rem sapiente esse alias quisquam optio
+          aperiam facilis quis ut magnam eligendi sunt error labore commodi non
+          ullam minus possimus corporis. Fugiat iure quis expedita.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+          aliquam? Fuga asperiores ducimus odit maiores quo amet ea et id harum
+          magnam molestias, suscipit delectus porro obcaecati, commodi quis
+          corrupti perferendis. Quas, id sequi vitae, accusantium aspernatur
+          dolores tenetur, unde adipisci assumenda labore voluptatum doloremque.
+          Sapiente provident cum ratione sequi laborum fuga neque obcaecati
+          earum, itaque porro! Eius eum, ipsa odio quia itaque explicabo.
+          Expedita fugiat reiciendis harum ea porro numquam accusamus ipsam
+          voluptates similique? Facere, quasi? Enim sequi recusandae iusto,
+          maiores nulla iure aperiam architecto a, error labore ratione! Ut
+          facere maiores expedita hic quod maxime temporibus itaque? Ducimus
+          repellendus tempora sed sapiente modi possimus officia adipisci
+          mollitia maxime, asperiores at quod maiores molestias, omnis porro
+          enim reiciendis unde fuga, itaque neque placeat saepe illum. Enim
+          repellendus rem maiores neque deleniti, architecto accusamus tempora
+          excepturi ea ipsum numquam harum doloremque voluptatibus tempore modi
+          suscipit est, sunt corporis quae rerum, autem reprehenderit quaerat.
+          Nihil, consectetur eaque dolor labore quo voluptates error repellendus
+          soluta officia reiciendis sed nulla? Atque perspiciatis distinctio
+          illo et veniam nihil quam, rem sapiente esse alias quisquam optio
+          aperiam facilis quis ut magnam eligendi sunt error labore commodi non
+          ullam minus possimus corporis. Fugiat iure quis expedita.
+        </p>
+      </article>
     </main>
     <footer>
-      <p>&copy;2025 - All rigth reserved</p>
+      <p>&copy; Todos los derechos reservados</p>
     </footer>
   </body>
 </html>
