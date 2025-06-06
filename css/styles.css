@@ -77,7 +77,7 @@ nav li {
   /*caja es el div padre de elemento relativo 1 y 2 con sus respectivos div*/
   border: 1px solid gray;
   height: 200px;
-  background-color: #eac4fddf;
+  background-color: #faf3fddf;
   position: relative;
 }
 
